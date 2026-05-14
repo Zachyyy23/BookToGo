@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.booktogo.controller.BookDetailsController"
+            styleClass="details-page">
+
+    <top>
+        <HBox spacing="12" styleClass="details-top">
+            <Button text="← Back to Catalog"
+                    onAction="#handleBack"
+                    styleClass="secondary-button-small"/>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="35" styleClass="details-content">
+
+            <VBox alignment="TOP_CENTER" spacing="14">
+                <Pane fx:id="coverPane" styleClass="details-cover"/>
+                <Label text="Book Cover Preview" styleClass="helper-text"/>
+            </VBox>
+
+            <VBox spacing="14" styleClass="details-info">
+
+                <Label fx:id="titleLabel"
+                       text="Book Title"
+                       styleClass="details-title"
+                       wrapText="true"/>
+
+                <Label fx:id="authorLabel"
+                       text="by Author Name"
+                       styleClass="details-author"/>
+
+                <HBox spacing="10">
+                    <Label fx:id="statusLabel"
+                           text="Available"
+                           styleClass="status-available"/>
+
+                    <Label fx:id="ratingLabel"
+                           text="Rating: ⭐ 4.5"
+                           styleClass="details-rating"/>
+                </HBox>
+
+                <VBox spacing="6" styleClass="details-meta-box">
+                    <Label fx:id="isbnLabel" text="ISBN: 0000000000000" styleClass="details-meta"/>
+                    <Label fx:id="genreLabel" text="Genre: Classic" styleClass="details-meta"/>
+                </VBox>
+
+                <Label text="Summary" styleClass="section-title"/>
+
+                <Label fx:id="descriptionLabel"
+                       text="Book description goes here."
+                       wrapText="true"
+                       styleClass="details-description"/>
+
+                <HBox spacing="12">
+                    <Button fx:id="primaryActionButton"
+                            text="Borrow Book"
+                            styleClass="details-primary-button"/>
+
+                    <Button text="Add Review"
+                            styleClass="details-secondary-button"/>
+
+                    <Button text="Report Damage"
+                            styleClass="details-warning-button"/>
+                </HBox>
+
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

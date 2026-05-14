@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.booktogo.controller.CatalogController"
+            fitToWidth="true"
+            styleClass="catalog-scroll">
+
+    <VBox fx:id="catalogContent"
+          spacing="25"
+          styleClass="catalog-page">
+
+        <VBox spacing="8">
+            <Label text="Search Book Catalog" styleClass="page-title"/>
+            <Label text="Browse, search, borrow, or reserve books from the BookToGo library."
+                   styleClass="page-subtitle"/>
+        </VBox>
+
+        <HBox spacing="12">
+            <TextField fx:id="searchField"
+                       promptText="Search by title, author, or genre..."
+                       styleClass="search-field"/>
+
+            <ComboBox fx:id="genreFilter"
+                      promptText="Genre"
+                      styleClass="filter-box"/>
+
+            <ComboBox fx:id="availabilityFilter"
+                      promptText="Availability"
+                      styleClass="filter-box"/>
+
+            <Button text="Search"
+                    onAction="#handleSearch"
+                    styleClass="primary-button-small"/>
+
+            <Button text="Reset"
+                    onAction="#handleReset"
+                    styleClass="secondary-button-small"/>
+        </HBox>
+
+        <HBox spacing="15">
+            <VBox styleClass="info-card">
+                <Label text="Browse Books" styleClass="card-title"/>
+                <Label text="Find available books from the catalog." styleClass="card-text"/>
+            </VBox>
+
+            <VBox styleClass="info-card">
+                <Label text="Reserve Books" styleClass="card-title"/>
+                <Label text="Join the queue for borrowed books." styleClass="card-text"/>
+            </VBox>
+
+            <VBox styleClass="info-card">
+                <Label text="Track Reading" styleClass="card-title"/>
+                <Label text="View borrowed books and due dates." styleClass="card-text"/>
+            </VBox>
+        </HBox>
+
+        <VBox spacing="12">
+            <Label text="Book Results" styleClass="section-title"/>
+            <FlowPane fx:id="bookResultsContainer"
+                      hgap="20"
+                      vgap="20"
+                      styleClass="book-section"/>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

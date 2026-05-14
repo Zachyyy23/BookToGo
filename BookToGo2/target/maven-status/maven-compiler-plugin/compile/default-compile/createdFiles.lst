@@ -1,0 +1,7 @@
+com\booktogo\model\Book.class
+com\booktogo\controller\BookDetailsController.class
+com\booktogo\controller\CatalogController.class
+com\booktogo\controller\MainLayoutController.class
+com\booktogo\Main.class
+com\booktogo\controller\DashboardController.class
+com\booktogo\controller\LoginController.class

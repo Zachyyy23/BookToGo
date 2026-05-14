@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.booktogo.controller.DashboardController"
+            fitToWidth="true"
+            styleClass="catalog-scroll">
+
+    <VBox spacing="28" styleClass="dashboard-page">
+
+        <HBox spacing="24">
+
+            <VBox spacing="12" HBox.hgrow="ALWAYS">
+                <Label text="Welcome back, Alex." styleClass="dashboard-title"/>
+                <Label text="Ready to dive into your next assignment? We've curated some fresh academic texts and leisure reading based on your recent borrows."
+                       wrapText="true"
+                       styleClass="dashboard-subtitle"/>
+
+                <HBox spacing="10">
+                    <Button text="All Categories" styleClass="category-pill-active"/>
+                    <Button text="Computer Science" styleClass="category-pill"/>
+                    <Button text="Design Theory" styleClass="category-pill"/>
+                    <Button text="Filters" styleClass="category-pill"/>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="10" styleClass="credit-card">
+                <HBox>
+                    <Label text="Library Credit Score" styleClass="credit-card-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label text="✓" styleClass="credit-check"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label text="780" styleClass="credit-score-large"/>
+                    <Label text="Excellent / Trusted" styleClass="credit-status"/>
+                </HBox>
+
+                <ProgressBar progress="0.78" styleClass="dashboard-credit-progress"/>
+
+                <Label text="Top 5% of students" styleClass="credit-note"/>
+            </VBox>
+
+        </HBox>
+
+        <VBox spacing="14">
+            <HBox alignment="CENTER_LEFT">
+                <Label text="Featured Reads" styleClass="section-title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="View All" styleClass="text-button"/>
+            </HBox>
+
+            <HBox spacing="22">
+                <VBox styleClass="dashboard-book-card">
+                    <Pane styleClass="featured-cover featured-cover-dark"/>
+                    <Label text="The Architecture of Meaning" styleClass="book-title"/>
+                    <Label text="Dr. Sarah Jenkins" styleClass="book-author"/>
+                    <Button text="Borrow Now" styleClass="book-button"/>
+                    <Button text="Preview Chapter" styleClass="outline-book-button"/>
+                </VBox>
+
+                <VBox styleClass="dashboard-book-card">
+                    <Pane styleClass="featured-cover featured-cover-muted"/>
+                    <Label text="Principles of UX Design" styleClass="book-title"/>
+                    <Label text="Marcus Chen" styleClass="book-author"/>
+                    <Button text="Borrow" styleClass="book-button"/>
+                </VBox>
+
+                <VBox styleClass="dashboard-book-card">
+                    <Pane styleClass="featured-cover featured-cover-teal"/>
+                    <Label text="Advanced Algorithms" styleClass="book-title"/>
+                    <Label text="Prof. Elena Rostova" styleClass="book-author"/>
+                    <Button text="Read" styleClass="book-button"/>
+                </VBox>
+
+                <VBox styleClass="dashboard-book-card">
+                    <Pane styleClass="featured-cover featured-cover-gold"/>
+                    <Label text="Data Structures in C++" styleClass="book-title"/>
+                    <Label text="William Davies" styleClass="book-author"/>
+                    <Button text="Preview Only" styleClass="outline-book-button"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="14">
+            <Label text="Recommended for You" styleClass="section-title"/>
+
+            <HBox spacing="18">
+                <VBox spacing="10" styleClass="recommendation-card">
+                    <HBox spacing="14">
+                        <Pane styleClass="small-book-cover"/>
+                        <VBox spacing="6">
+                            <Label text="Introduction to Linear Algebra" styleClass="recommendation-title"/>
+                            <Label text="A helpful reference for math-heavy computer engineering topics."
+                                   wrapText="true"
+                                   styleClass="recommendation-text"/>
+                            <Label text="Must Read for CS101" styleClass="recommendation-tag"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <VBox spacing="10" styleClass="recommendation-card">
+                    <HBox spacing="14">
+                        <Pane styleClass="small-book-cover"/>
+                        <VBox spacing="6">
+                            <Label text="Clean Code Architecture" styleClass="recommendation-title"/>
+                            <Label text="Recommended for software design, architecture, and maintainability."
+                                   wrapText="true"
+                                   styleClass="recommendation-text"/>
+                            <Label text="Design Pick" styleClass="recommendation-tag"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </VBox>
+
+    </VBox>
+</ScrollPane>
