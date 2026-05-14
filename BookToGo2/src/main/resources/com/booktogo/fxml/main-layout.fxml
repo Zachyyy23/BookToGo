@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.booktogo.controller.MainLayoutController"
+            styleClass="app-root">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="18" styleClass="top-bar">
+
+            <Label text="BookToGo" styleClass="brand-title"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <TextField promptText="Search books, authors, or ISBN..."
+                       styleClass="global-search"/>
+
+            <Label text="🔔" styleClass="top-icon"/>
+            <Label text="◉" styleClass="top-icon"/>
+
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="14" styleClass="sidebar">
+
+            <HBox spacing="10" styleClass="profile-box">
+                <Label text="LM" styleClass="avatar"/>
+                <VBox spacing="2">
+                    <Label text="Library Member" styleClass="profile-name"/>
+                    <Label text="Credit Score: 780" styleClass="credit-score-small"/>
+                    <ProgressBar progress="0.78" styleClass="credit-progress"/>
+                </VBox>
+            </HBox>
+
+            <Separator/>
+
+            <Button text="▦   Dashboard"
+                    onAction="#showDashboard"
+                    styleClass="sidebar-button active-sidebar-button"/>
+
+            <Button text="⌕   Search Books"
+                    onAction="#showCatalog"
+                    styleClass="sidebar-button"/>
+
+            <Button text="▯   Borrowed Books"
+                    styleClass="sidebar-button"/>
+
+            <Button text="☑   Reservations"
+                    styleClass="sidebar-button"/>
+
+            <Button text="▧   Reviews"
+                    styleClass="sidebar-button"/>
+
+            <Button text="♢   Notifications"
+                    styleClass="sidebar-button"/>
+
+            <Separator/>
+
+            <Button text="♙   Profile"
+                    styleClass="sidebar-button"/>
+
+            <Button text="⚙   Admin Panel"
+                    styleClass="sidebar-button"/>
+
+            <Button text="▣   Librarian Controls"
+                    styleClass="sidebar-button"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button text="↪   Logout"
+                    onAction="#logout"
+                    styleClass="logout-sidebar-button"/>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+
+</BorderPane>
